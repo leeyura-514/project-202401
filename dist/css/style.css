@@ -1604,7 +1604,9 @@ img {
     padding: 5.4rem 0;
   }
   #sc-visual .swiper-slide .text-box .box-inner {
+    justify-content: flex-start;
     width: 100%;
+    height: 100%;
     padding: 0 16px;
   }
   #sc-visual .swiper-slide .text-box .badge {
