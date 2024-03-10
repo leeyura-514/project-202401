@@ -1,0 +1,252 @@
+// variable
+$current-width: 1920px;
+$mobile-width: 320px;
+$tablet-width: 768px;
+$tablet-large-width: 820px;
+$laptop-width: 1024px;
+$desktop-width: 1920px;
+$common-inner: 1280px;
+$font: "Spoqa Han Sans Neo";
+$coloror : #FFB41E;
+$colorbr : #654A2D;
+$colorred : #C52819;
+$colorpink: #EE70BA;
+$colorgray: #999;
+
+// mixin
+@mixin mobile {
+  @media (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin font-64 {
+	font-size: 6.4rem;
+	@media (max-width: #{$laptop-width - 1px}) {
+    font-size: 3rem;
+  }
+}
+@mixin font-40 {
+	font-size: 4rem;
+	@media (max-width: #{$laptop-width - 1px}) {
+    font-size: 2.8rem;
+  }
+}
+@mixin font-28 {
+	font-size: 2.8rem;
+	@media (max-width: #{$laptop-width - 1px}) {
+    font-size: 2rem;
+  }
+}
+@mixin font-24 {
+	font-size: 2.4rem;
+	@media (max-width: #{$laptop-width - 1px}) {
+    font-size: 2rem;
+  }
+}
+@mixin font-20 {
+	font-size: 2rem;
+	@media (max-width: #{$laptop-width - 1px}) {
+    font-size: 2rem;
+  }
+}
+@mixin font-16 {
+	font-size: 1.6rem;
+	@media (max-width: #{$laptop-width - 1px}) {
+    font-size: 1.2rem;
+  }
+}
+@mixin font-14 {
+	font-size: 1.4rem;
+	@media (max-width: #{$laptop-width - 1px}) {
+    font-size: 1.2rem;
+  }
+}
+@mixin font-12 {
+	font-size: 1.2rem;
+	@media (max-width: #{$laptop-width - 1px}) {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin col-3 {
+	flex: calc((100% - 1.6rem) / 4);
+	max-width: calc((100% - 1.6rem * 3) / 4);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1.6rem;
+		&:last-child {
+			margin-bottom: 0rem;
+		}
+	}
+}
+@mixin col-4 {
+	flex: calc(100% / 3 - 0.8rem);
+	max-width: calc(100% / 3 - 0.8rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1.6rem;
+		&:last-child {
+			margin-bottom: 0rem;
+		}
+	}
+	@include laptop {
+		flex: calc(100% / 3);
+		max-width: calc(100% / 3 - 1rem);
+		margin-bottom: 1rem;
+		&:nth-child(n + 4) {
+			margin-bottom: 0rem;
+		}
+	}
+}
+@mixin col-6 {
+	flex: calc(100% / 2);
+	max-width: calc(100% / 2 - 0.8rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+		&:last-child {
+			margin-bottom: 0rem;
+		}
+	}
+}
+@mixin col-8 {
+	flex: calc(100% / 1.5 - 1.6rem);
+	max-width: calc(100% / 1.5 - 1.6rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+		&:last-child {
+			margin-bottom: 0rem;
+		}
+	}
+}
+@mixin col-9 {
+	flex: calc(75%);
+	max-width: calc(75% - 1rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+		&:last-child {
+			margin-bottom: 0rem;
+		}
+	}
+}
+@mixin col-12 {
+	flex: 100%;
+	max-width: 100%;
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
+@mixin all-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@content;
+}
+@mixin v-center {
+	display: flex;
+	align-items: center;
+	@content;
+}
+@mixin h-center {
+	display: flex;
+	justify-content: center;
+	@content;
+}
+@mixin flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+@mixin flex-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+@mixin position-center-all {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin position-center-y {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+@mixin position-center-x {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+@mixin text-ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+@mixin text-line-limit {
+	display: -webkit-box;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+}
+@mixin text-underline {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+// commponent
+@mixin btn-all {
+	@include flex-between;
+	width: 9.1rem;
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 2.4rem;
+		height: 2.4rem;
+		margin-left: .8rem;
+		border-radius: 8px 8px 0px 8px;
+		background: $coloror;
+		background-image: url('../../images/e24-btn-all.png');
+		background-size: 12px 12px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	@content;
+}
+@mixin m-overflow {
+	overflow-x: auto;
+	white-space: nowrap;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	@content;
+}
+
