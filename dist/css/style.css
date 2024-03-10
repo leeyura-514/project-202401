@@ -848,6 +848,7 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: 50;
 }
 #sc-visual .swiper-slide .text-box .box-inner {
   display: flex;
