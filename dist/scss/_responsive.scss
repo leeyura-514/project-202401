@@ -34,13 +34,11 @@
       padding: 0;
     }
     .swiper-slide {
-      .bg {
-        max-height: 47.6rem;
-        border-radius: 0px 0px 24px 24px;
-      }
       .text-box {
         justify-content: flex-start;
         padding: 5.4rem 0;
+        max-height: 47.6rem;
+        border-radius: 0px 0px 24px 24px;
         .box-inner {
           justify-content: flex-start;
           width: 100%;
@@ -61,17 +59,17 @@
         }
       }
       &[main-slide="0"] {
-        .bg {
+        .text-box {
           background-image: url('../../images/m-e24-mainvisual01.png');
         }
       }
       &[main-slide="1"] {
-        .bg {
+        .text-box {
           background-image: url('../../images/m-e24-mainvisual02.png');
         }
       }
       &[main-slide="2"] {
-        .bg {
+        .text-box {
           background-image: url('../../images/m-e24-mainvisual03.png');
         }
       }
