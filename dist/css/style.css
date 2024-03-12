@@ -791,6 +791,7 @@ img {
   }
   #header-area .heading-block {
     position: absolute;
+    top: 0;
     left: 100vw;
     width: calc(100% + 32px);
     height: 100%;
@@ -830,7 +831,6 @@ img {
     display: block;
   }
   #header-area.m-gnb-open .heading-block {
-    display: block;
     left: -16px;
     border-radius: 0 0 0 0px;
     z-index: -1;
