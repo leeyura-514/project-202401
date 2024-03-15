@@ -1584,7 +1584,7 @@ img {
 
 #sc-shop {
   padding-top: 16rem;
-  margin-top: 4rem;
+  margin-top: 16rem;
 }
 #sc-shop .common-inner {
   display: -webkit-box;
@@ -1645,6 +1645,7 @@ img {
   border-radius: 16px 0 16px 16px;
   background-color: #EBEBEB;
   margin-left: 0.6rem;
+  cursor: pointer;
 }
 #sc-shop .search-area .tag-list li:first-child {
   margin-left: 0;
