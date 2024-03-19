@@ -1110,6 +1110,7 @@ img {
 }
 #sc-visual .btn-wrap .btn.play {
   display: none;
+  background-image: url("../../images/e24-btn-play.png");
 }
 #sc-visual .btn-wrap .btn.pause {
   display: block;
