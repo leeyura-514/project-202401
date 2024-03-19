@@ -122,6 +122,7 @@
       cursor: pointer;
       &.play {
         display: none;
+        background-image: url('../../images/e24-btn-play.png');
       }
       &.pause {
         display: block;
