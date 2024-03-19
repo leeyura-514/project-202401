@@ -2287,13 +2287,13 @@ img {
   #sc-visual .swiper-slide .text-box .box-inner {
     width: 100%;
   }
-  #sc-visual .swiper-slide[main-slide="0"] .bg {
+  #sc-visual .swiper-slide[main-slide="0"] .text-box {
     background-image: url("../../images/e24-mainvisual01.png");
   }
-  #sc-visual .swiper-slide[main-slide="1"] .bg {
+  #sc-visual .swiper-slide[main-slide="1"] .text-box {
     background-image: url("../../images/e24-mainvisual02.png");
   }
-  #sc-visual .swiper-slide[main-slide="2"] .bg {
+  #sc-visual .swiper-slide[main-slide="2"] .text-box {
     background-image: url("../../images/e24-mainvisual03.png");
   }
 }
