@@ -21,7 +21,9 @@ $('[data-fade]').each(function(i,e){
  * 메인비주얼 - slide
 */
 var mainSlide = new Swiper('.main-slide', {
-  autoplay: true,
+  autoplay: {
+    delay: 3000,
+  },
   spaceBetween: 10,
   pagination: {
     el: ".pagi-fraction",
@@ -33,6 +35,19 @@ var mainSlide = new Swiper('.main-slide', {
       prevEl: ".btn.prev"
   },
 });
+//slide 재생멈춤
+var sw = 0;
+$('.btn.pause').click(()=>{
+  $('.btn.pause').addClass('active');
+  $('.btn.play').addClass('active');
+  mainSlide.autoplay.stop();
+});
+$('.btn.play').click(()=>{
+  $('.btn.pause').removeClass('active');
+  $('.btn.play').removeClass('active');
+  mainSlide.autoplay.start();
+});
+
 //progress Bar
 var pagingSwiper = new Swiper(".main-slide", {
 pagination: {
