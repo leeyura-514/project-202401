@@ -36,7 +36,6 @@ var mainSlide = new Swiper('.main-slide', {
   },
 });
 //slide 재생멈춤
-var sw = 0;
 $('.btn.pause').click(()=>{
   $('.btn.pause').addClass('active');
   $('.btn.play').addClass('active');
