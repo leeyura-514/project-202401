@@ -267,6 +267,7 @@
   }
   #sc-shop {
     padding-top: 6.8rem;
+    margin-top: 6.8rem;
     .common-inner {
       flex-direction: column;
       padding: 0;
@@ -368,17 +369,17 @@
         }
       }
       &[main-slide="0"] {
-        .bg {
+        .text-box {
           background-image: url('../../images/e24-mainvisual01.png');
         }
       }
       &[main-slide="1"] {
-        .bg {
+        .text-box {
           background-image: url('../../images/e24-mainvisual02.png');
         }
       }
       &[main-slide="2"] {
-        .bg {
+        .text-box {
           background-image: url('../../images/e24-mainvisual03.png');
         }
       }
